@@ -1,0 +1,17 @@
+---
+name: "TubeArchivist Sponsorblock"
+guid: "4d1ba1b4-c78f-4e34-b2fd-d4cdb7676e2c"
+imageUrl: https://raw.githubusercontent.com/Atinoda/jellyfin-plugin-tubearchivist-sponsorblock/master/assets/TubeArchivistSponsorblock.png
+version: "0.1.0.0"
+targetAbi: "10.10.0.0"
+framework: "net8.0"
+overview: "Send TubeArchivist Sponsorblock segments to Jellyfin media segments."
+description: >
+  Send TubeArchivist Sponsorblock segments
+  to Jellyfin media segments, via the API.
+category: "General"
+owner: "jellyfin"
+artifacts:
+- "Jellyfin.Plugin.TubeArchivistSponsorblock.dll"
+changelog: >
+  changelog

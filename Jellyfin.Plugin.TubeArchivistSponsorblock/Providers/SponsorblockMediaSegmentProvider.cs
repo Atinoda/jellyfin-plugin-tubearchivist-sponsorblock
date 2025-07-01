@@ -140,45 +140,6 @@ public class SponsorblockMediaSegmentProvider : IMediaSegmentProvider
             sponsorblockSegment.SegmentTimes[1]);
         }
 
-        // var segments = new List<MediaSegmentDto>(Array.Empty<MediaSegmentDto>());  // DEBUG  - empty list return
-
-        /*
-        var chapters = _itemRepository.GetChapters(item);
-        if (chapters.Count == 0)
-        {
-            // No chapters, so nothing to parse.
-            return Task.FromResult<IReadOnlyList<MediaSegmentDto>>(Array.Empty<MediaSegmentDto>());
-        }
-
-        var segments = new List<MediaSegmentDto>(chapters.Count);
-
-        for (var index = 0; index < chapters.Count; index++)
-        {
-            var chapterInfo = chapters[index];
-            var nextChapterInfo = index + 1 < chapters.Count ? chapters[index + 1] : null;
-
-            if (string.IsNullOrEmpty(chapterInfo.Name))
-            {
-                continue;
-            }
-
-            var type = GetMediaSegmentType(chapterInfo.Name);
-
-            if (type.HasValue)
-            {
-                _logger.LogInformation("GetMediaSegments() {Name} ({Path})", item.Name, item.Path);
-                segments.Add(new MediaSegmentDto
-                {
-                    Id = Guid.NewGuid(),
-                    ItemId = item.Id,
-                    Type = type.Value,
-                    StartTicks = chapterInfo.StartPositionTicks,
-                    EndTicks = nextChapterInfo?.StartPositionTicks ?? mediaItem.RunTimeTicks ?? chapterInfo.StartPositionTicks
-                });
-            }
-        }
-        */
-
         return Task.FromResult<IReadOnlyList<MediaSegmentDto>>(segments);
     }
 }

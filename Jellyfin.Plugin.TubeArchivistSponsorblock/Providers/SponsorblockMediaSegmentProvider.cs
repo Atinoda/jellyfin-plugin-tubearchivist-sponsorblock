@@ -105,7 +105,7 @@ public class SponsorblockMediaSegmentProvider : IMediaSegmentProvider
         var sponsorblockSegments = _tubeArchivistApi.GetVideoSponsorblockSegments(videoId).GetAwaiter().GetResult();
         if (sponsorblockSegments.Count > 0)
         {
-            _logger.LogInformation(
+            _logger.LogDebug(
                 "GetMediaSegments() [{Name}] (videoId: {Id}) Found {Count} sponsorblock segments.",
                 item.Name,
                 videoId,

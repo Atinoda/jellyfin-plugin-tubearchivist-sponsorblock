@@ -24,7 +24,7 @@ This Jellyfin plugin integrates the [Sponsorblock](https://sponsor.ajay.app/) fu
     - **Collection Title:** **must** match the library name that is managed by tube archivist
     - **Host URL:** **must** be formatted starting with `http://` and ending with a single slash `/`, e.g., `http://127.0.0.1:8000/`
     - **API Key:** not strictly required, but may be used in the future
-- *(Optional)* Customise the Sponsorblock Segments to Jellyfin Segments mapping*
+- *(Optional)* Customise the Sponsorblock Segments to Jellyfin Segments mapping
 
 ## Enjoy
 **You only have one chance to program segments into each piece of media.** Read the Notes section.
@@ -34,7 +34,7 @@ This Jellyfin plugin integrates the [Sponsorblock](https://sponsor.ajay.app/) fu
 
 # Notes
 
-## You only get one shot *(for now)*
+## You only get one shot
 If Jellyfin maps segments to a piece of media, it will never query segments for that media again, unless an overwrite command is sent. While there is a mechanism to ask for an overwrite, it is not implemented here. It may be in the future.
 
 ## You get as many shots as you like
@@ -44,7 +44,7 @@ Hypothetically, if a person was developing and testing a jellyfin plugin, they m
 
 - They might back up the server config, shut it down, edit that database with a sqlite tool, and then restart the server.
 - They might have used the command `DELETE FROM MediaSegments;` to clear the table.
-- They might even have got impatient with that process and deleted the table contents on a running and live server (which had a **FULL BACKUP AVAILABLE**), then immediately run the segment scan action again. This action may have caused absolutely no issues at all, because the `MediaSegments` table appears to be relatively standalone.
+- They might even have got impatient with that process and deleted the table contents on a running and live server (which had a **FULL BACKUP AVAILABLE**), then immediately run the segment scan task again. This procedure may have caused absolutely no issues at all, because the `MediaSegments` table appears to be relatively standalone.
 
 Hypothetically a user of this plugin could delete the contents of the segments table if they somehow had a problem and wanted to re-add segments.
 

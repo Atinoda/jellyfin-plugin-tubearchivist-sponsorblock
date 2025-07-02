@@ -83,26 +83,6 @@ public class TubeArchivistApi
     /// <returns>A task.</returns>
     public async Task<string?> GetRawVideoData(string videoId)
     {
-        // Dummy response contents
-        // // TEST: null -- passed
-        // string? rawData = null;
-        // TEST: empty -- passed
-        // string? rawData = string.Empty;
-        // // TEST: valid -- passed
-        // string rawData = @"{
-        //     ""sponsorblock"": {
-        //         ""segments"":[{
-        //             ""actionType"":""skip"",
-        //             ""segment"":[248.621,311.231],
-        //             ""votes"":3,
-        //             ""category"":""sponsor""
-        //         }]
-        //     }
-        // }";
-        // // TEST: invalid -- passed
-        // string rawData = "fartnoise";
-        // // DEBUG - Dummy await
-        // await Task.CompletedTask.ConfigureAwait(true);
         // Call and await the API
         var endpoint = $"api/video/{videoId}/";
         string? rawData = await GetDataFromApi(endpoint).ConfigureAwait(true);

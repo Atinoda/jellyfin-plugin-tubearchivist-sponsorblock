@@ -54,7 +54,7 @@ Hypothetically a user of this plugin could delete the contents of the segments t
 - The user would also wisely muse that a backup of a jellyfin config takes up a **trivial** amount of disk space and they would certainly **not attempt any database edits** without a **tested** server backup.
 
 ## Jellyfin version support
-This project is coupled to Tube Archivist, and they state that they will support only the latest version of Jellyfin. This plugin aims to align with that policy. It was initially developed to support Jellyin `v10.10.*`.
+This project is coupled to Tube Archivist, and they state that they will support only the latest version of Jellyfin. This plugin aims to align with that policy. It was initially developed to support Jellyin `v10.10.*`. This plugin also supports Jellyfin `v10.11.0`.
 
 # Contribution
 - This plugin was hacked together functionality-first; there is no love here, it was built to do a single job! I do not expect to develop it further, there is no feature roadmap.

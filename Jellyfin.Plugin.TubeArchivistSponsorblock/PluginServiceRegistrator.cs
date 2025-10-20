@@ -1,5 +1,6 @@
 ﻿using Jellyfin.Plugin.TubeArchivistSponsorblock.TubeArchivist;
 using MediaBrowser.Controller;
+using MediaBrowser.Controller.MediaSegments;
 using MediaBrowser.Controller.Plugins;
 using Microsoft.Extensions.DependencyInjection;
 

@@ -41,6 +41,7 @@ public class TubeArchivistApi
         string apiKey = config.TubeArchivistAPIKey;
         httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Token", apiKey);
         // httpClient.DefaultRequestHeaders.Add("Authorization", $"Token {config.TubeArchivistAPIKey}");
+        #pragma warning disable CA1873
         _logger.LogDebug("GetDataFromApi() API Key - {String}", apiKey);
         // Concatenate the base URL with the endpoint
         string baseUrl = config.TubeArchivistHostUrl;  // Assuming the base URL is configured in the settings

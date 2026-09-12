@@ -58,6 +58,7 @@ public class SponsorblockMediaSegmentProvider : IMediaSegmentProvider
         var itemLibraryName = itemCollectionFolders.FirstOrDefault()?.Name;
         if (config.TubeArchivistCollectionTitle == itemLibraryName)
         {
+            #pragma warning disable CA1873
             _logger.LogDebug("Supports() [0] {0} supported", item.Name);
             return new ValueTask<bool>(true);
         }
@@ -144,4 +145,7 @@ public class SponsorblockMediaSegmentProvider : IMediaSegmentProvider
 
         return Task.FromResult<IReadOnlyList<MediaSegmentDto>>(segments);
     }
+
+    /// <inheritdoc />
+    public Task CleanupExtractedData(Guid itemId, CancellationToken cancellationToken) => Task.CompletedTask;
 }

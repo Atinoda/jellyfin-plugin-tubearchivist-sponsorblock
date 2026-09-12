@@ -10,6 +10,14 @@
         "repository": "https://github.com/Atinoda/jellyfin-plugin-tubearchivist-sponsorblock",
         "versions": [
             {
+                "checksum": "6d772bde9b3b95e3e16bfd1870ab5f44",
+                "changelog": "Update for Jellyfin v12.0 compatibility\n",
+                "targetAbi": "12.0",
+                "sourceUrl": "https://github.com/Atinoda/jellyfin-plugin-tubearchivist-sponsorblock/releases/download/v0.1.2.0/tubearchivist-sponsorblock_0.1.2.0.zip",
+                "timestamp": "2026-09-12T22:33:44Z",
+                "version": "0.1.2.0"
+            },
+            {
                 "checksum": "e3df62aca41767953d3742a11e93e11d",
                 "changelog": "Updated for Jellyfin v10.11.0.0 compatibility\n",
                 "targetAbi": "10.11.0.0",
